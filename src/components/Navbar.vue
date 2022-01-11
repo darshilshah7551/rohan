@@ -1,14 +1,15 @@
 <template>
-  <nav>
-    <v-toolbar flat app>
-      <v-app-bar>
+  <!-- <nav> -->
+    <div>
+    <v-toolbar  app>
+      <!-- <v-app-bar > -->
         <v-app-bar-nav-icon
           class="grey--text"
           @click="drawer = !drawer"
         ></v-app-bar-nav-icon>
-      </v-app-bar>
+      <!-- </v-app-bar> -->
 
-      <v-toolbar-title class="text-uppercase grey--text">
+      <v-toolbar-title  class="text-uppercase grey--text">
         <span class="font-weight-light">Todo</span>
         <span>Rohan</span>
       </v-toolbar-title>
@@ -20,22 +21,27 @@
     </v-toolbar>
 
     <v-navigation-drawer app v-model="drawer" class="purple lighten-2">
+      
+
+      
       <v-list>
         <v-list-item-group>
-          <v-list-title v-for="(link, index) in links" :key="index">
-            <v-list-title-action>
+          <v-list-item v-for="(link, index) in links" :key="index">
+            <v-list-item-action>
               <v-icon class="white--text">{{ link.icon }}</v-icon>
-            </v-list-title-action>
-            <v-list-title-content>
-              <v-list-title class="white--text">
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item class="white--text">
                 {{ link.text }}
-              </v-list-title>
-            </v-list-title-content>
-          </v-list-title>
+              </v-list-item>
+            </v-list-item-content>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
+     
     </v-navigation-drawer>
-  </nav>
+    </div>
+  <!-- </nav> -->
 </template>
 
 <script>

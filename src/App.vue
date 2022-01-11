@@ -1,10 +1,10 @@
 <template>
-  <v-app-bar app class="grey lighten-4">
+  <v-app app class="grey lighten-4">
     <Navbar />
-    <v-main>
+    <v-content transition="slide-x-transition">
       <router-view></router-view>
-    </v-main>
-  </v-app-bar>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
