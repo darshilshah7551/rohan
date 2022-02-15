@@ -3,7 +3,7 @@
     <!-- <v-row>
       <v-col cols="8"> -->
     <v-treeview :items="projects">
-      <template slot="label" slot-scope="props">
+      <template `slot`="label" `slot-scope`="props">
         <v-row>
           <v-col cols="9">
             <div @click="route(props.item.name)">
